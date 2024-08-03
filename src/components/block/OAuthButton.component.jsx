@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button.jsx";
 import { assets } from "@/assets/assets.js";
-import { useFirebase } from "../../context/firebase.context.jsx";
 
 const providerAssets = {
   google: assets.google,
@@ -11,18 +10,14 @@ const providerAssets = {
 
 export const OAuthButtonComponent = ({ provider, onClick, onError }) => {
   const ProviderIcon = providerAssets[provider];
-  const { setLoading } = useFirebase();
 
   const onClickHandler = async () => {
-    setLoading(true);
     try {
       await onClick();
       console.log("Successfully Signed in...");
-      return setLoading(false);
     } catch (error) {
       console.error(error);
       onError(error);
-      return setLoading(false);
     }
   };
 

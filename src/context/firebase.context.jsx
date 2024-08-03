@@ -111,7 +111,6 @@ export const FirebaseProvider = (props) => {
         handleSignOut,
         user,
         loading,
-        setLoading,
       }}
     >
       {props.children}
