@@ -1,7 +1,25 @@
 <div align="center">
-  <img height="70px" src="https://skillicons.dev/icons?i=react,vite,tailwind,ts" alt="Technology Icons">
-  <h1>Frontend App Starter Template</h1>
-</div>
+  <img height="70px" src="https://github.com/user-attachments/assets/7a6263bf-858b-4c53-82c5-ac447b2f976f" alt="CHAT favicon">
+
+  <h1>CHAT</h1>
+  <a href="https://github.com/RanitManik/Project-Starter-Template/wiki"><strong>Explore the docs »</strong></a>
+  <br>
+  <br>
+  <a href="https://github.com/RanitManik/Project-Starter-Template">View Demo</a>
+  ·
+  <a href=".github/ISSUE_TEMPLATE/bug_report.md">Report Bug</a>
+  ·
+  <a href=".github/ISSUE_TEMPLATE/feature_request.md">Request Feature</a>
+  <br/>
+  <br/>
+  
+  ![GitHub Created At](https://img.shields.io/github/created-at/RanitManik/CHAT)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/RanitManik/CHAT)
+  ![GitHub Discussions](https://img.shields.io/github/discussions/RanitManik/CHAT)
+  ![GitHub License](https://img.shields.io/github/license/RanitManik/CHAT)
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/81260c78-410f-4aaf-8505-588d7900d19f/deploy-status)](https://app.netlify.com/sites/cerulean-marzipan-cd1873/deploys)
+  
+</div>  
 
 Welcome to the **Frontend App Starter Template**! This template is a starting point for building dynamic and interactive web applications using Vite and React with all the essential community standards to support you in successfully launching your projects.
 
