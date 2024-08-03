@@ -1,11 +1,7 @@
 <div align="center">
   <img height="70px" src="https://github.com/user-attachments/assets/7a6263bf-858b-4c53-82c5-ac447b2f976f" alt="CHAT favicon">
-
-  <h1>CHAT</h1>
-  <a href="https://github.com/RanitManik/Project-Starter-Template/wiki"><strong>Explore the docs »</strong></a>
-  <br>
-  <br>
-  <a href="https://github.com/RanitManik/Project-Starter-Template">View Demo</a>
+  <h1>CHAT – Connect, Have A Talk</h1>
+  <a href="https://chat.ranitmanik.live/">View Demo</a>
   ·
   <a href=".github/ISSUE_TEMPLATE/bug_report.md">Report Bug</a>
   ·
@@ -17,16 +13,16 @@
   ![GitHub repo size](https://img.shields.io/github/repo-size/RanitManik/CHAT)
   ![GitHub Discussions](https://img.shields.io/github/discussions/RanitManik/CHAT)
   ![GitHub License](https://img.shields.io/github/license/RanitManik/CHAT)
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/81260c78-410f-4aaf-8505-588d7900d19f/deploy-status)](https://app.netlify.com/sites/cerulean-marzipan-cd1873/deploys)
+  ![Netlify Status](https://api.netlify.com/api/v1/badges/81260c78-410f-4aaf-8505-588d7900d19f/deploy-status)
   
 </div>  
 
-Welcome to the **Frontend App Starter Template**! This template is a starting point for building dynamic and interactive web applications using Vite and React with all the essential community standards to support you in successfully launching your projects.
+Welcome to **CHAT – *Connect, Have A Talk***, a real-time chat application built with React and Firebase. This application provides an interactive chat experience, leveraging modern technologies to deliver fast and reliable communication.
 
 ## Table of Contents
 
 - [Overview](#overview)
-    - [Why This Template?](#why-this-template)
+    - [Why This Application?](#why-this-application)
     - [Technologies Used](#technologies-used)
     - [Features](#features)
 - [Getting Started](#getting-started)
@@ -42,19 +38,18 @@ Welcome to the **Frontend App Starter Template**! This template is a starting po
 
 ## Overview
 
-### Why This Template?
+### Why This Application?
 
-Your time is valuable, and this template is designed to streamline the process of creating a React application with Vite, allowing you to focus on building amazing projects that solve problems and help others.
-
-This template will continue to evolve to better meet diverse needs. Feel free to suggest changes by forking this repo, creating a pull request, or opening an issue. Contributions are always welcome!
+CHAT is designed to offer a seamless real-time chat experience, making it easier to connect and communicate. Built with React and Firebase, it ensures real-time data synchronization and a smooth user interface, making it ideal for modern communication needs.
 
 ### Technologies Used
 
 <p>
    <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" height="30px">
-   <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" height="30px">
+   <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase&logoColor=white" alt="FirebaseContext" height="30px">
    <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS" height="30px">
-   <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge" alt="typescript" height="30px">
+   <img src="https://img.shields.io/badge/shadcn%2Fui-000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="ShadcnUI" height="30px">
+   <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" height="30px">
    <img src="https://img.shields.io/badge/PostCSS-%23DD3A0A.svg?style=for-the-badge&logo=postcss&logoColor=white" alt="PostCSS" height="30px">
    <img src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" height="30px">
    <img src="https://img.shields.io/badge/Prettier-F7B93E.svg?style=for-the-badge&logo=Prettier&logoColor=black" alt="Prettier" height="30px">
@@ -63,9 +58,10 @@ This template will continue to evolve to better meet diverse needs. Feel free to
 ### Features
 
 - **React**: A powerful JavaScript library for building user interfaces.
-- **Vite**: A next-generation frontend tooling. It's fast and efficient, perfect for modern web development.
+- **FirebaseContext**: A comprehensive app development platform for managing databases, authentication, and hosting.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **TypeScript**: A superset of JavaScript that adds static types to the language.
+- **Shadcn/UI**: A UI component library for building beautiful interfaces.
+- **JavaScript**: The programming language that powers the web.
 - **PostCSS**: A tool for transforming CSS with JavaScript plugins.
 - **ESLint**: Code linting to maintain consistent code quality.
 - **Prettier**: Code formatting to ensure a consistent code style.
@@ -82,8 +78,8 @@ This template will continue to evolve to better meet diverse needs. Feel free to
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/RanitManik/Frontend-App-Starter-Template.git
-   cd frontend-app-starter-template
+   git clone https://github.com/RanitManik/CHAT.git
+   cd CHAT
    ```
 
 2. **Install dependencies:**
@@ -161,37 +157,34 @@ yarn format
 The project structure is as follows:
 
 ```
-frontend-app-starter-template/
-├── index.html
-├── package.json
-├── postcss.config.js
-├── public/
-│   └── vite.svg
-├── README.md
-├── src/
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.tsx
-├── tailwind.config.js
-└── vite.config.js
+CHAT/
+├── components.json # Component metadata
+├── index.html # HTML template
+├── LICENSE # License information
+├── package.json # Project dependencies and scripts
+├── package-lock.json # Lock file for dependencies
+├── postcss.config.js # PostCSS configuration
+├── public # Static assets
+│ └── vite.svg # Vite logo
+├── README.md # Project documentation
+├── src # Main source code
+│ ├── App.jsx # Main application component
+│ ├── components # All components
+│ │ └── ui # Reusable ShadcnUI components
+│ │     └── button.jsx # Shadcn Button component
+│ ├── index.css # Global styles
+│ ├── lib # Utility functions
+│ │ └── utils.js # Utility functions
+│ └── main.jsx # Entry point for React application
+├── tailwind.config.js # Tailwind CSS configuration
+├── tsconfig.json # TypeScript configuration
+├── tsconfig.node.json # TypeScript configuration for Node.js
+└── vite.config.js # Vite configuration file
 ```
-
-- **index.html**: HTML template.
-- **package.json**: Project metadata and dependencies.
-- **postcss.config.js**: PostCSS configuration file.
-- **public/**: Contains static assets.
-    - **vite.svg**: Vite logo used in the project.
-- **README.md**: Project documentation.
-- **src/**: Contains the main source code for the React application.
-    - **App.jsx**: The main App component.
-    - **index.css**: Global CSS styles.
-    - **main.tsx**: The entry point of the application.
-- **tailwind.config.js**: Tailwind CSS configuration file.
-- **vite.config.js**: Vite configuration file.
 
 ## Contributing
 
-We welcome contributions to enhance the Frontend App Starter Template project. To contribute:
+We welcome contributions to enhance the CHAT application. To contribute:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix:
@@ -226,5 +219,6 @@ _Feel free to reach out if you have questions or just want to chat about web adv
 ---
 
 <p align="center">
-   Thank you for using the <strong>Frontend App Starter Template</strong>! Happy coding! 🚀
+   Thank you for using <strong>CHAT</strong>! Happy chatting! 🚀
 </p>
+
