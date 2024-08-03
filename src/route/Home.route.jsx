@@ -3,6 +3,7 @@ import { useFirebase } from "@/context/firebase.context.jsx";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { LoaderComponent } from "@/components/block/Loader.component.jsx";
+import DashboardComponent from "../components/block/Dashboard.component.jsx";
 
 export const HomeRoute = () => {
   const { user, loading } = useFirebase();
@@ -20,7 +21,7 @@ export const HomeRoute = () => {
 
   return (
     <BackgroundComponent>
-      <p className="text-center">This is the home route</p>
+      <DashboardComponent />
     </BackgroundComponent>
   );
 };

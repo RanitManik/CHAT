@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -14,6 +14,7 @@ import { useFirebase } from "@/context/firebase.context.jsx";
 import { OAuthButtonComponent } from "@/components/block/OAuthButton.component.jsx";
 import { toast, Toaster } from "sonner";
 import useErrorHandlerComponent from "../../hooks/LoginErrorHandler.hook.jsx";
+import LinkComponent from "./Link.component.jsx";
 
 export function SignUpFormComponent() {
   const [firstName, setFirstName] = useState("");
@@ -56,7 +57,7 @@ export function SignUpFormComponent() {
   };
 
   return (
-    <>
+    <main>
       <div className="grid min-h-svh place-items-center">
         <Card className="mx-auto w-full max-w-sm self-center">
           <CardHeader>
@@ -143,14 +144,12 @@ export function SignUpFormComponent() {
             </div>
             <div className="mt-4 text-center text-sm">
               Already have an account?{" "}
-              <Link to="/login" className="font-semibold underline">
-                Sign in
-              </Link>
+              <LinkComponent to="/login">Sign in</LinkComponent>
             </div>
           </CardContent>
         </Card>
       </div>
       <Toaster richColors />
-    </>
+    </main>
   );
 }

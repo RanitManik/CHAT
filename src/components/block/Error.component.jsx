@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button.jsx";
 
 const ErrorComponent = ({ ERROR_DETAILS }) => {
   return (
-    <div
+    <main
       className="grid min-h-svh place-items-center content-center gap-6 text-center"
       aria-live="assertive"
     >
@@ -16,7 +16,7 @@ const ErrorComponent = ({ ERROR_DETAILS }) => {
         {ERROR_DETAILS.actionIcon}
         {ERROR_DETAILS.actionLabel}
       </Button>
-    </div>
+    </main>
   );
 };
 

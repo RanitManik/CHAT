@@ -14,6 +14,7 @@ import { useFirebase } from "@/context/firebase.context.jsx";
 import { OAuthButtonComponent } from "@/components/block/OAuthButton.component.jsx";
 import { toast, Toaster } from "sonner";
 import useErrorHandlerComponent from "@/hooks/LoginErrorHandler.hook.jsx";
+import LinkComponent from "./Link.component.jsx";
 
 export function LoginFormComponent() {
   const {
@@ -52,7 +53,7 @@ export function LoginFormComponent() {
   };
 
   return (
-    <>
+    <main>
       <div className="grid min-h-svh place-items-center">
         <Card className="mx-auto w-full max-w-sm self-center">
           <CardHeader>
@@ -121,14 +122,12 @@ export function LoginFormComponent() {
             </div>
             <div className="mt-4 text-center text-sm">
               Don&apos;t have an account?{" "}
-              <Link to="/register" className="font-semibold underline">
-                Sign up
-              </Link>
+              <LinkComponent to="/register">Sign up</LinkComponent>
             </div>
           </CardContent>
         </Card>
       </div>
       <Toaster richColors />
-    </>
+    </main>
   );
 }
