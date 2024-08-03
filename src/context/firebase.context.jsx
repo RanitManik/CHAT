@@ -61,7 +61,7 @@ export const FirebaseProvider = (props) => {
       setLoading(false);
     });
     return () => unsubscribe();
-  }, []);
+  }, [user]);
 
   const signUpUserWithEmailAndPassword = (email, password) => {
     return createUserWithEmailAndPassword(firebaseAuth, email, password);
@@ -111,6 +111,7 @@ export const FirebaseProvider = (props) => {
         handleSignOut,
         user,
         loading,
+        setLoading,
       }}
     >
       {props.children}
