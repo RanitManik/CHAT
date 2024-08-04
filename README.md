@@ -13,6 +13,9 @@
   ![GitHub repo size](https://img.shields.io/github/repo-size/RanitManik/CHAT)
   ![GitHub Discussions](https://img.shields.io/github/discussions/RanitManik/CHAT)
   ![GitHub License](https://img.shields.io/github/license/RanitManik/CHAT)
+  ![GitHub stars](https://img.shields.io/github/stars/RanitManik/CHAT?style=default)
+  ![GitHub forks](https://img.shields.io/github/forks/RanitManik/CHAT?style=default)
+  <br/>
   ![Netlify Status](https://api.netlify.com/api/v1/badges/81260c78-410f-4aaf-8505-588d7900d19f/deploy-status)
   ![Wakatime](https://wakatime.com/badge/github/RanitManik/CHAT.svg)
   
