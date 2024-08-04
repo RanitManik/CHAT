@@ -27,30 +27,28 @@
     --radius: 0.5rem;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      color-scheme: dark;
-      --background: 159 65% 4%;
-      --foreground: 159 10% 97.5%;
-      --muted: 159 50% 15%;
-      --muted-foreground: 159 10% 55%;
-      --popover: 159 45% 6.5%;
-      --popover-foreground: 159 10% 97.5%;
-      --card: 159 45% 6.5%;
-      --card-foreground: 159 10% 97.5%;
-      --border: 159 50% 15%;
-      --input: 159 50% 15%;
-      --primary: 159 100% 50%;
-      --primary-foreground: 159 10% 5%;
-      --secondary: 159 50% 15%;
-      --secondary-foreground: 159 10% 97.5%;
-      --accent: 159 50% 15%;
-      --accent-foreground: 159 10% 97.5%;
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 159 10% 97.5%;
-      --ring: 159 100% 50%;
-      --radius: 0.5rem;
-    }
+  .dark {
+    color-scheme: dark;
+    --background: 159 65% 4%;
+    --foreground: 159 10% 97.5%;
+    --muted: 159 50% 15%;
+    --muted-foreground: 159 10% 55%;
+    --popover: 159 45% 6.5%;
+    --popover-foreground: 159 10% 97.5%;
+    --card: 159 45% 6.5%;
+    --card-foreground: 159 10% 97.5%;
+    --border: 159 50% 15%;
+    --input: 159 50% 15%;
+    --primary: 159 100% 50%;
+    --primary-foreground: 159 10% 5%;
+    --secondary: 159 50% 15%;
+    --secondary-foreground: 159 10% 97.5%;
+    --accent: 159 50% 15%;
+    --accent-foreground: 159 10% 97.5%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 159 10% 97.5%;
+    --ring: 159 100% 50%;
+    --radius: 0.5rem;
   }
 }
 
@@ -60,12 +58,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-  }
-
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+    @apply relative min-h-svh bg-background text-foreground;
   }
 }

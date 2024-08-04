@@ -1,15 +1,15 @@
-import { assets } from "../../assets/assets.js";
+import NavigationComponent from "./Navigation.component.jsx";
+import BackgroundComponent from "./Background.component.jsx";
 
 const DashboardComponent = () => {
   return (
-    <>
-      <div
-        className="absolute inset-0 opacity-10 mix-blend-multiply dark:opacity-50 dark:mix-blend-screen"
-        style={{ backgroundImage: `url(${assets.doodle})` }}
-      ></div>
-      <nav>{/* Navigation content */}</nav>
-      <main className="h-screen min-w-[100px]">{/* Main content */}</main>
-    </>
+    <BackgroundComponent>
+      <div className="m-auto grid min-h-svh place-items-center">
+        <div className="m-auto h-full max-h-[1000px] w-full max-w-[1900px] overflow-auto bg-background px-4">
+          <NavigationComponent />
+        </div>
+      </div>
+    </BackgroundComponent>
   );
 };
 

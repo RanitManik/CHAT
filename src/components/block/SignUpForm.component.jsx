@@ -58,7 +58,7 @@ export function SignUpFormComponent() {
 
   return (
     <main>
-      <div className="grid min-h-svh place-items-center">
+      <div className="grid min-h-svh place-items-center px-4">
         <Card className="mx-auto w-full max-w-sm self-center">
           <CardHeader>
             <CardTitle className="text-xl">Sign Up</CardTitle>
