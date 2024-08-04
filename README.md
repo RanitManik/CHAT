@@ -219,9 +219,7 @@ _Feel free to reach out if you have questions or just want to chat about web adv
 
 ## Acknowledgments
 
-- [Markdown Badges](https://github.com/Ileriayo/markdown-badges)
-- [shields.io Badges](https://shields.io/)
-- [Skill Icons](https://github.com/tandpfun/skill-icons)
+This project wouldn't be possible without the collaboration and resources of the developer community. Thanks to the community and tools like React and Firebase. Special appreciation goes to friends and family. I hope it inspires further learning.
 
 ---
 
