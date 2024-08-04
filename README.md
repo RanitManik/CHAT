@@ -14,7 +14,7 @@
   ![GitHub Discussions](https://img.shields.io/github/discussions/RanitManik/CHAT)
   ![GitHub License](https://img.shields.io/github/license/RanitManik/CHAT)
   ![Netlify Status](https://api.netlify.com/api/v1/badges/81260c78-410f-4aaf-8505-588d7900d19f/deploy-status)
-  ![Wakatime](https://wakatime.com/badge/user/6c66cc47-ce26-48cc-a555-22494865c546/project/6679ff4a-1ca4-4f0e-bd9f-a6b3a31fedb5.svg)
+  ![Wakatime](https://wakatime.com/badge/github/RanitManik/CHAT.svg)
   
 </div>  
 
