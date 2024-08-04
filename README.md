@@ -159,28 +159,31 @@ The project structure is as follows:
 
 ```
 CHAT/
-├── components.json # Component metadata
-├── index.html # HTML template
+├── public/ # Public static assets
+├── src/ # Main source code
+│   ├── assets/ # Application assets (e.g., images, icons)
+│   ├── components/ # Reusable React components
+│   │   ├── ui/ # UI components (e.g., buttons, forms)
+│   │   └── block/ # Custom reusable components
+│   ├── context/ # React contexts for state management
+│   ├── hooks/ # Custom React hooks
+│   ├── index.css # Global styles
+│   ├── App.jsx # Main application component
+│   └── main.jsx # Entry point for React application
+├── .env.example # Template for environment variables
+├── .gitignore # Files and directories to be ignored by Git
+├── .prettierrc # Prettier configuration file
+├── index.html # HTML template for the app
 ├── LICENSE # License information
 ├── package.json # Project dependencies and scripts
 ├── package-lock.json # Lock file for dependencies
 ├── postcss.config.js # PostCSS configuration
-├── public # Static assets
-│ └── vite.svg # Vite logo
 ├── README.md # Project documentation
-├── src # Main source code
-│ ├── App.jsx # Main application component
-│ ├── components # All components
-│ │ └── ui # Reusable ShadcnUI components
-│ │     └── button.jsx # Shadcn Button component
-│ ├── index.css # Global styles
-│ ├── lib # Utility functions
-│ │ └── utils.js # Utility functions
-│ └── main.jsx # Entry point for React application
 ├── tailwind.config.js # Tailwind CSS configuration
 ├── tsconfig.json # TypeScript configuration
 ├── tsconfig.node.json # TypeScript configuration for Node.js
 └── vite.config.js # Vite configuration file
+
 ```
 
 ## Contributing
