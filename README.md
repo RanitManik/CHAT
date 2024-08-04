@@ -54,6 +54,7 @@ CHAT is designed to offer a seamless real-time chat experience, making it easier
    <img src="https://img.shields.io/badge/PostCSS-%23DD3A0A.svg?style=for-the-badge&logo=postcss&logoColor=white" alt="PostCSS" height="30px">
    <img src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint" height="30px">
    <img src="https://img.shields.io/badge/Prettier-F7B93E.svg?style=for-the-badge&logo=Prettier&logoColor=black" alt="Prettier" height="30px">
+   <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" height="30px" />
 </p>
 
 ### Features
@@ -183,7 +184,6 @@ CHAT/
 ├── tsconfig.json # TypeScript configuration
 ├── tsconfig.node.json # TypeScript configuration for Node.js
 └── vite.config.js # Vite configuration file
-
 ```
 
 ## Contributing
