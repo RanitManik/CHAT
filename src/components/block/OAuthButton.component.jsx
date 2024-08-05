@@ -28,7 +28,7 @@ export const OAuthButtonComponent = ({ provider, onClick, onError }) => {
       onClick={onClickHandler}
       variant="secondary"
     >
-      <ProviderIcon className="h-full" />
+      <ProviderIcon className="h-full text-foreground" />
     </Button>
   );
 };

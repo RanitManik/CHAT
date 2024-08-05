@@ -116,7 +116,7 @@ export function SignUpFormComponent() {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full transition-none">
                 Create an account
               </Button>
             </form>
