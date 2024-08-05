@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useFirebase } from "@/context/firebase.context.jsx";
+import { useFirebase } from "@/context/Firebase.context.jsx";
 import { OAuthButtonComponent } from "@/components/block/OAuthButton.component.jsx";
 import { toast, Toaster } from "sonner";
 import useErrorHandlerComponent from "../../hooks/LoginErrorHandler.hook.jsx";

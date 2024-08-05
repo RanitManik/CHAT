@@ -1,5 +1,5 @@
 import BackgroundComponent from "@/components/block/Background.component.jsx";
-import { useFirebase } from "@/context/firebase.context.jsx";
+import { useFirebase } from "@/context/Firebase.context.jsx";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { LoaderComponent } from "@/components/block/Loader.component.jsx";

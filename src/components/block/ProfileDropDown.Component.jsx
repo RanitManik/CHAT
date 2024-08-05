@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { assets } from "@/assets/assets.js";
 import { Button } from "@/components/ui/button.jsx";
-import { useFirebase } from "@/context/firebase.context.jsx";
+import { useFirebase } from "@/context/Firebase.context.jsx";
 import {
   Cloud,
   CreditCard,
