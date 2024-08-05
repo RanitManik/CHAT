@@ -4,6 +4,7 @@ import { ReactComponent as microsoft } from "./logos/microsoft.svg";
 import { ReactComponent as facebook } from "./logos/facebook.svg";
 import logo from "./logos/logo.svg";
 import doodle from "./backgrounds/doodle.svg";
+import user from "./icons/user.svg";
 
 export const assets = {
   logo,
@@ -12,4 +13,5 @@ export const assets = {
   microsoft,
   facebook,
   doodle,
+  user,
 };
