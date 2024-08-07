@@ -18,11 +18,11 @@ const ModeToggleDropdownComponent = () => {
     switch (theme) {
       case "dark":
         return (
-          <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 fill-accent stroke-primary transition-all duration-300 animate-in fade-in spin-in" />
+          <Moon className="h-[1.2rem] w-[1.2rem] rotate-0 fill-accent stroke-primary transition-all duration-300 animate-in fade-in spin-in" />
         );
       case "light":
         return (
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] fill-accent stroke-primary transition-all duration-300 animate-in fade-in spin-in" />
+          <Sun className="absolute h-[1.2rem] w-[1.2rem] fill-accent stroke-primary transition-all duration-300 animate-in fade-in spin-in" />
         );
       case "system":
         return (
