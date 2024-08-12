@@ -10,7 +10,7 @@ const NavigationComponent = () => {
                 <div className="flex h-full select-none items-center gap-4">
                     <img className="h-full" src={`${assets.logo}`} alt="" />
                     <h1 className="hidden text-2xl text-primary lg:block">
-                        CHAT - Connect, Have a Chat
+                        CHAT - Connect, Have A Chat
                     </h1>
                 </div>
                 <div className="flex items-center gap-4">
