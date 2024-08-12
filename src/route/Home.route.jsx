@@ -6,22 +6,22 @@ import { LoaderComponent } from "@/components/block/Loader.component.jsx";
 import DashboardComponent from "../components/block/Dashboard.component.jsx";
 
 export const HomeRoute = () => {
-  const { user, loading } = useFirebase();
-  const navigate = useNavigate();
+    const { user, loading } = useFirebase();
+    const navigate = useNavigate();
 
-  useEffect(() => {
-    if (!user && !loading) {
-      navigate("/login");
-    }
-  }, [navigate, user, loading]);
+    useEffect(() => {
+        if (!user && !loading) {
+            navigate("/login");
+        }
+    }, [navigate, user, loading]);
 
-  if (loading) return <LoaderComponent />;
+    if (loading) return <LoaderComponent />;
 
-  if (!user) return null;
+    if (!user) return null;
 
-  return (
-    <BackgroundComponent>
-      <DashboardComponent />
-    </BackgroundComponent>
-  );
+    return (
+        <BackgroundComponent>
+            <DashboardComponent />
+        </BackgroundComponent>
+    );
 };

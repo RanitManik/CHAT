@@ -7,11 +7,11 @@ import doodle from "./backgrounds/doodle.svg";
 import user from "./icons/user.svg";
 
 export const assets = {
-  logo,
-  google,
-  github,
-  microsoft,
-  facebook,
-  doodle,
-  user,
+    logo,
+    google,
+    github,
+    microsoft,
+    facebook,
+    doodle,
+    user,
 };
