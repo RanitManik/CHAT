@@ -24,15 +24,15 @@ const ThemeSwitcherIconComponent = () => {
         switch (theme) {
             case "dark":
                 return (
-                    <Moon className="h-6 w-6 rotate-0 fill-accent stroke-primary transition-all duration-300 animate-in fade-in spin-in" />
+                    <Moon className="absolute h-5 w-5 rotate-0 fill-accent stroke-primary transition-all duration-300 animate-in fade-in spin-in" />
                 );
             case "light":
                 return (
-                    <Sun className="absolute h-6 w-6 fill-accent stroke-primary transition-all duration-300 animate-in fade-in spin-in" />
+                    <Sun className="absolute h-5 w-5 fill-accent stroke-primary transition-all duration-300 animate-in fade-in spin-in" />
                 );
             case "system":
                 return (
-                    <Monitor className="absolute h-6 w-6 fill-accent stroke-primary transition-all duration-300 animate-in fade-in zoom-in" />
+                    <Monitor className="absolute h-5 w-5 fill-accent stroke-primary transition-all duration-300 animate-in fade-in zoom-in" />
                 );
         }
     };
@@ -44,7 +44,11 @@ const ThemeSwitcherIconComponent = () => {
                     <DropdownMenuTrigger asChild>
                         <div>
                             <TooltipTrigger asChild>
-                                <Button variant="ghost" size="icon">
+                                <Button
+                                    variant="outline"
+                                    className="rounded-full"
+                                    size="icon"
+                                >
                                     {getIcon()}
                                     <span className="sr-only">
                                         Toggle theme
