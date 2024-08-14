@@ -72,21 +72,21 @@ const NavigationComponent = () => {
             </nav>
             <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
                 <ThemeSwitcherIconComponent />
+                <SettingsDropDownComponent />
                 <TooltipProvider>
                     <Tooltip>
                         <TooltipTrigger asChild>
                             <Button
                                 variant="outline"
                                 size="icon"
-                                className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
+                                className="mt-2 flex h-8 w-8 items-center justify-center overflow-hidden rounded-full"
                             >
                                 <UserAvatarComponent />
                             </Button>
                         </TooltipTrigger>
-                        <TooltipContent side="right">User</TooltipContent>
+                        <TooltipContent side="right">Profile</TooltipContent>
                     </Tooltip>
                 </TooltipProvider>
-                <SettingsDropDownComponent />
             </nav>
         </aside>
     );

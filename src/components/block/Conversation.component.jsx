@@ -48,32 +48,32 @@ const ConversationComponent = () => {
                 <div className="flex items-end justify-between gap-4">
                     <div className="flex items-center gap-3">
                         <Button
-                            className="relative h-[50px] w-[50px]"
+                            className="h-[50px] w-[50px]"
                             variant="outline"
                             size="icon"
                         >
-                            <SmilePlus className="h-[1.5rem] w-[1.5rem] fill-accent stroke-primary transition-all duration-300 animate-in fade-in" />
+                            <SmilePlus className="h-[1.5rem] w-[1.5rem] stroke-foreground" />
                         </Button>
                         <Button
-                            className="relative h-[50px] w-[50px]"
+                            className="h-[50px] w-[50px]"
                             variant="outline"
                             size="icon"
                         >
-                            <Plus className="h-[1.5rem] w-[1.5rem] fill-accent stroke-primary transition-all duration-300 animate-in fade-in" />
+                            <Plus className="h-[1.5rem] w-[1.5rem] stroke-foreground" />
                         </Button>
                     </div>
                     <textarea
                         placeholder="Type a message"
                         rows="1"
                         spellCheck="true"
-                        className="h-auto max-h-[20svh] flex-1 resize-none rounded-lg border border-input bg-background p-3 outline-none [field-sizing:content]"
+                        className="h-auto max-h-[20svh] max-w-full flex-1 resize-none overflow-auto break-all rounded-lg border border-input bg-background p-3 outline-none [field-sizing:content]"
                     ></textarea>
                     <Button
-                        className="relative h-[50px] w-[50px]"
+                        className="h-[50px] w-[50px]"
                         variant="outline"
                         size="icon"
                     >
-                        <SendHorizontal className="h-[1.5rem] w-[1.5rem] fill-accent stroke-primary transition-all duration-300 animate-in fade-in" />
+                        <SendHorizontal className="h-[1.5rem] w-[1.5rem] stroke-foreground" />
                     </Button>
                 </div>
             </div>
