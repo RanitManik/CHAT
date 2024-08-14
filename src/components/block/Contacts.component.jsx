@@ -25,7 +25,7 @@ const ContactsComponent = () => {
                         <Tooltip>
                             <TooltipTrigger asChild>
                                 <Button variant="ghost" size="icon">
-                                    <UserRoundPlus />
+                                    <UserRoundPlus className="stroke-foreground" />
                                 </Button>
                             </TooltipTrigger>
                             <TooltipContent>Add Contact</TooltipContent>
@@ -35,7 +35,7 @@ const ContactsComponent = () => {
                         <Tooltip>
                             <TooltipTrigger asChild>
                                 <Button variant="ghost" size="icon">
-                                    <EllipsisVertical />
+                                    <EllipsisVertical className="stroke-foreground" />
                                 </Button>
                             </TooltipTrigger>
                             <TooltipContent>Menu</TooltipContent>
