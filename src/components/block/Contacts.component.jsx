@@ -54,7 +54,7 @@ const ContactsComponent = () => {
                         className="w-full bg-background pl-12 focus-visible:ring-0 focus-visible:ring-offset-0"
                     />
                 </div>
-                <div className="flex gap-2 px-4">
+                <div className="flex select-none gap-2 px-4">
                     <Badge className="cursor-pointer text-sm">All</Badge>
                     <Badge
                         className="cursor-pointer text-sm"
@@ -82,7 +82,7 @@ const ContactsComponent = () => {
                     .map((_, index) => (
                         <div
                             key={index}
-                            className="flex h-20 cursor-pointer items-center gap-4 border-b border-border py-2 pl-4 pr-4 transition-all last:border-none hover:bg-primary/30"
+                            className="flex h-20 cursor-pointer select-none items-center gap-4 border-b border-border py-2 pl-4 pr-4 transition-all last:border-none hover:bg-primary/30"
                         >
                             <img
                                 className="h-full object-cover py-2"

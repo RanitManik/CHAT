@@ -8,7 +8,7 @@ const UserAvatarComponent = () => {
     return (
         <>
             {user && user.displayName ? (
-                <Avatar>
+                <Avatar className="select-none">
                     <AvatarImage
                         src={user.photoURL}
                         alt={`@${user.displayName}`}
