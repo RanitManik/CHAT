@@ -33,7 +33,7 @@ const ChatComponent = () => {
     ];
 
     return (
-        <div className="grid p-4">
+        <div className="grid p-6">
             {messages.map((msg) => (
                 <div
                     key={msg.id}
@@ -41,7 +41,7 @@ const ChatComponent = () => {
                 >
                     {msg.text && (
                         <p
-                            className={`break-all rounded-xl p-3 ${
+                            className={`break-all rounded-xl p-3 text-sm ${
                                 msg.isSender
                                     ? "rounded-tr-none bg-muted"
                                     : "rounded-tl-none bg-foreground/10"
@@ -59,7 +59,7 @@ const ChatComponent = () => {
                     )}
                     {msg.timestamp && (
                         <span
-                            className={`text-sm ${msg.isSender ? "justify-self-end" : "justify-self-start"}`}
+                            className={`text-xs ${msg.isSender ? "justify-self-end" : "justify-self-start"}`}
                         >
                             {msg.timestamp}
                         </span>
