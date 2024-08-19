@@ -82,7 +82,7 @@ const ContactsComponent = () => {
                     .map((_, index) => (
                         <div
                             key={index}
-                            className="flex h-20 cursor-pointer select-none items-center gap-4 border-b border-border py-2 pl-4 pr-4 transition-all last:border-none hover:bg-primary/30"
+                            className="flex h-20 cursor-pointer select-none items-center gap-4 border-b border-border py-2 pl-4 pr-4 transition-all last:border-none hover:bg-primary/10"
                         >
                             <img
                                 className="h-full object-cover py-2"

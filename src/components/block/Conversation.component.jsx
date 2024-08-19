@@ -53,9 +53,27 @@ const ConversationComponent = () => {
                         </span>
                     </div>
                 </div>
-                <div className="flex items-center gap-8">
-                    <Search />
-                    <EllipsisVertical />
+                <div className="flex items-center gap-4">
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Button variant="ghost" size="icon">
+                                    <Search className="stroke-foreground" />
+                                </Button>
+                            </TooltipTrigger>
+                            <TooltipContent>Search</TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
+                    <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                                <Button variant="ghost" size="icon">
+                                    <EllipsisVertical className="stroke-foreground" />
+                                </Button>
+                            </TooltipTrigger>
+                            <TooltipContent>Menu</TooltipContent>
+                        </Tooltip>
+                    </TooltipProvider>
                 </div>
             </div>
             <ScrollArea

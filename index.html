@@ -1,23 +1,85 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-        content="CHAT - Connect, Have A Talk. A real-time chat application built with React and Firebase, offering a seamless communication experience with modern technologies. Ideal for real-time messaging and interactive conversations." />
-  <meta name="keywords" content="CHAT, real-time chat, React, Firebase, messaging, web application, communication" />
-  <meta name="author" content="Ranit Manik" />
-  <meta property="og:title" content="CHAT - Connect, Have A Talk" />
-  <meta property="og:description"
-        content="CHAT is a real-time chat application built with React and Firebase. Experience seamless communication and modern features for interactive conversations." />
-  <meta property="og:image" content="/favicon.svg" />
-  <meta property="og:url" content="https://chat.ranitmanik.live/" />
-  <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <title>CHAT</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+          content="CHAT - Connect, Have A Talk. A real-time chat application built with React and Firebase, offering a seamless communication experience with modern technologies. Ideal for real-time messaging and interactive conversations." />
+    <meta name="keywords" content="CHAT, real-time chat, React, Firebase, messaging, web application, communication" />
+    <meta name="author" content="Ranit Manik" />
+    <meta property="og:title" content="CHAT - Connect, Have A Talk" />
+    <meta property="og:description"
+          content="CHAT is a real-time chat application built with React and Firebase. Experience seamless communication and modern features for interactive conversations." />
+    <meta property="og:image" content="/favicon.svg" />
+    <meta property="og:url" content="https://chat.ranitmanik.live/" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>CHAT</title>
+    <style>
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100svh;
+            background: var(--background-color, #fff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader-circle {
+            border: 4px solid var(--border-color);
+            border-left: 4px solid var(--loader-color, #000);
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Light theme */
+        @media (prefers-color-scheme: light) {
+            :root {
+                --background-color: hsl(157 91% 95%);
+                --loader-color: hsl(157 61.9% 4.1%);
+                --border-color: hsl(157 30% 50%);
+            }
+        }
+
+        /* Dark theme */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-color: hsl(159 65% 4%);
+                --loader-color: hsl(159 100% 50%);
+                --border-color: hsl(159 50% 15%);
+            }
+        }
+    </style>
 </head>
 <body>
 <div id="root"></div>
+<div class="loader">
+    <div class="loader-circle"></div>
+</div>
 <script type="module" src="./src/main.jsx"></script>
+<script>
+    window.addEventListener("load", () => {
+        document.querySelector(".loader").classList.add("hidden");
+    });
+</script>
 </body>
 </html>
