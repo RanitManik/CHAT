@@ -9,7 +9,7 @@ const DeviceWarning = ({ children }) => {
             const mobileDevices =
                 /iphone|ipod|android|blackberry|windows phone|opera mini|iemobile|mobile/;
             const isMobileDevice = mobileDevices.test(userAgent);
-            const isSmallScreen = window.innerWidth <= 768;
+            const isSmallScreen = window.innerWidth <= 1000;
 
             setIsMobile(isMobileDevice || isSmallScreen);
         };

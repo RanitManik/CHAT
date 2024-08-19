@@ -1,5 +1,4 @@
 import NavigationComponent from "./Navigation.component.jsx";
-import { ScrollArea } from "@/components/ui/scroll-area.jsx";
 import ConversationComponent from "@/components/block/Conversation.component.jsx";
 import ContactsComponent from "@/components/block/Contacts.component.jsx";
 import {
@@ -19,11 +18,9 @@ const DashboardComponent = () => {
                 >
                     <ResizablePanel
                         defaultSize={30}
-                        className="ml-16 min-w-[min(20vw,300px)] max-w-[min(40vw,600px)]"
+                        className="ml-16 min-w-[400px] max-w-[min(40vw,600px)]"
                     >
-                        <ScrollArea type="always" className="h-full">
-                            <ContactsComponent />
-                        </ScrollArea>
+                        <ContactsComponent />
                     </ResizablePanel>
                     <ResizableHandle withHandle />
                     <ResizablePanel defaultSize={70} className="flex flex-col">

@@ -3,6 +3,7 @@ import { ReactComponent as github } from "./logos/github.svg";
 import { ReactComponent as microsoft } from "./logos/microsoft.svg";
 import { ReactComponent as facebook } from "./logos/facebook.svg";
 import { ReactComponent as Logo } from "./logos/logo.svg";
+import user from "./icons/user.svg";
 
 export const assets = {
     google,
@@ -10,4 +11,5 @@ export const assets = {
     microsoft,
     facebook,
     Logo,
+    user,
 };
