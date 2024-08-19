@@ -22,6 +22,7 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip.jsx";
+import ChatComponent from "@/components/block/Chat.component.jsx";
 
 const ConversationComponent = () => {
     const [openEmojiSelector, setOpenEmojiSelector] = useState(false);
@@ -95,7 +96,7 @@ const ConversationComponent = () => {
                         theme={emojiTheme}
                     />
                 </div>
-                <div className="min-h-svh"></div>
+                <ChatComponent />
             </ScrollArea>
             <div className="py-3">
                 <div className="flex items-end justify-between gap-4">

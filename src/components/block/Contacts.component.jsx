@@ -9,7 +9,7 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip.jsx";
 import { ScrollArea } from "@/components/ui/scroll-area.jsx";
-import { Badge } from "@/components/ui/badge";
+import ContactSummaryComponent from "@/components/block/ContactSummary.component.jsx";
 
 const ContactsComponent = () => {
     return (
@@ -55,52 +55,31 @@ const ContactsComponent = () => {
                     />
                 </div>
                 <div className="flex select-none gap-2 px-4">
-                    <Badge className="cursor-pointer text-sm">All</Badge>
-                    <Badge
-                        className="cursor-pointer text-sm"
+                    <Button className="h-7 cursor-pointer rounded-full px-3 text-sm font-bold">
+                        All
+                    </Button>
+                    <Button
+                        className="h-7 cursor-pointer rounded-full px-3 text-sm font-bold"
                         variant="secondary"
                     >
                         Unread
-                    </Badge>
-                    <Badge
-                        className="cursor-pointer text-sm"
+                    </Button>
+                    <Button
+                        className="h-7 cursor-pointer rounded-full px-3 text-sm font-bold"
                         variant="secondary"
                     >
                         Favourites
-                    </Badge>
-                    <Badge
-                        className="cursor-pointer text-sm"
+                    </Button>
+                    <Button
+                        className="h-7 cursor-pointer rounded-full px-3 text-sm font-bold"
                         variant="secondary"
                     >
                         Groups
-                    </Badge>
+                    </Button>
                 </div>
             </div>
             <ScrollArea type="always" className="flex-1 pr-4">
-                {Array(10)
-                    .fill(0)
-                    .map((_, index) => (
-                        <div
-                            key={index}
-                            className="flex h-20 cursor-pointer select-none items-center gap-4 border-b border-border py-2 pl-4 pr-4 transition-all last:border-none hover:bg-primary/10"
-                        >
-                            <img
-                                className="h-full object-cover py-2"
-                                src={`${assets.user}`}
-                                alt="default user-image"
-                            />
-                            <div>
-                                <span className="text-xl">Ranit Manik</span>
-                                <p className="line-clamp-1 overflow-hidden text-ellipsis text-sm text-foreground/70">
-                                    Do you even have the slightest idea, bro?
-                                    What the hell are you talking about? Google
-                                    already has an in-built pre-scanning APK
-                                    feature. It scans your app before installing
-                                    it, ensuring safety.
-                                </p>
-                            </div>
-                        </div>
-                    ))}
+                <ContactSummaryComponent />
             </ScrollArea>
         </div>
     );
