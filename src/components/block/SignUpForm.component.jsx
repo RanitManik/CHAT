@@ -11,17 +11,19 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useFirebase } from "@/context/Firebase.context.jsx";
-import { OAuthButtonComponent } from "@/components/block/OAuthButton.component.jsx";
+import { OAuthButtonUi } from "@/components/ui/OAuthButton.ui.jsx";
 import { toast } from "sonner";
 import useErrorHandlerComponent from "../../hooks/LoginErrorHandler.hook.jsx";
-import LinkComponent from "./Link.component.jsx";
+import LinkUi from "../ui/Link.ui.jsx";
 import { sendEmailVerification } from "firebase/auth";
+import { LoaderCircle } from "lucide-react";
 
 export function SignUpFormComponent() {
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const {
         signUpUserWithEmailAndPassword,
@@ -30,7 +32,6 @@ export function SignUpFormComponent() {
         signInUserWithFacebook,
         signInUserWithMicrosoft,
         isLoggedIn,
-        firebaseAuth,
     } = useFirebase();
     const navigate = useNavigate();
     const { generateErrorMessage } = useErrorHandlerComponent();
@@ -41,31 +42,33 @@ export function SignUpFormComponent() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const signUpPromise = async () => {
-            await signUpUserWithEmailAndPassword(email, password);
+        setLoading(true);
+        try {
+            const userCredential = await signUpUserWithEmailAndPassword(
+                email,
+                password,
+            );
 
-            sendEmailVerification(firebaseAuth.currentUser)
-                .then(() => {
-                    console.log("Verification email sent successfully.");
-                    toast.success(
-                        "Verification email sent successfully. Please check your inbox.",
-                    );
-                })
-                .catch((error) => {
-                    console.log(error);
-                    toast.error(
-                        "An error occurred while sending the verification email. Please try again later.",
-                    );
-                });
-        };
-
-        toast.promise(signUpPromise(), {
-            loading: "Creating your account...",
-            success: "Account created successfully!",
-            error: (error) => generateErrorMessage(error.code),
-        });
+            if (userCredential?.user) {
+                console.log("Account created successfully!");
+                await sendEmailVerification(userCredential.user);
+                console.log("Verification email sent successfully.");
+                toast.success(
+                    "Account created successfully! Verification email sent. Please check your inbox.",
+                );
+            } else {
+                throw new Error("User creation failed.");
+            }
+        } catch (error) {
+            const errorMessage = generateErrorMessage(
+                error?.code || "auth/unknown",
+            );
+            toast.error(errorMessage);
+            console.error("Sign-up error:", error);
+        } finally {
+            setLoading(false);
+        }
     };
-
     return (
         <main>
             <div className="grid min-h-svh place-items-center px-4">
@@ -137,31 +140,40 @@ export function SignUpFormComponent() {
                             <Button
                                 type="submit"
                                 className="w-full transition-none"
+                                disabled={loading}
                             >
-                                Create an account
+                                {loading ? (
+                                    <LoaderCircle className="animate-spin" />
+                                ) : (
+                                    "Create an account"
+                                )}
                             </Button>
                         </form>
                         <div className="mt-4 grid grid-cols-4 gap-2">
-                            <OAuthButtonComponent
+                            <OAuthButtonUi
                                 provider="google"
                                 onClick={signInUserWithGoogle}
+                                disabled={loading}
                             />
-                            <OAuthButtonComponent
+                            <OAuthButtonUi
                                 provider="microsoft"
                                 onClick={signInUserWithMicrosoft}
+                                disabled={loading}
                             />
-                            <OAuthButtonComponent
+                            <OAuthButtonUi
                                 provider="github"
                                 onClick={signInUserWithGithub}
+                                disabled={loading}
                             />
-                            <OAuthButtonComponent
+                            <OAuthButtonUi
                                 provider="facebook"
                                 onClick={signInUserWithFacebook}
+                                disabled={loading}
                             />
                         </div>
                         <div className="mt-4 text-center text-sm">
                             Already have an account?{" "}
-                            <LinkComponent to="/login">Sign in</LinkComponent>
+                            <LinkUi to="/login">Sign in</LinkUi>
                         </div>
                     </CardContent>
                 </Card>

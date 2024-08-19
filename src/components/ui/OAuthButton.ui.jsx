@@ -10,7 +10,7 @@ const providerAssets = {
     facebook: assets.facebook,
 };
 
-export const OAuthButtonComponent = ({ provider, onClick }) => {
+export const OAuthButtonUi = ({ provider, onClick, ...props }) => {
     const { generateErrorMessage } = useErrorHandlerComponent();
     const ProviderIcon = providerAssets[provider];
 
@@ -35,6 +35,7 @@ export const OAuthButtonComponent = ({ provider, onClick }) => {
             aria-label={`Sign in with ${provider.charAt(0).toUpperCase() + provider.slice(1)}`}
             onClick={onClickHandler}
             variant="secondary"
+            {...props}
         >
             <ProviderIcon className="h-full text-foreground" />
         </Button>

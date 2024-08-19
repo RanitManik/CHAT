@@ -11,10 +11,11 @@ import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useFirebase } from "@/context/Firebase.context.jsx";
-import { OAuthButtonComponent } from "@/components/block/OAuthButton.component.jsx";
+import { OAuthButtonUi } from "@/components/ui/OAuthButton.ui.jsx";
 import { toast } from "sonner";
 import useErrorHandlerComponent from "@/hooks/LoginErrorHandler.hook.jsx";
-import LinkComponent from "./Link.component.jsx";
+import LinkUi from "../ui/Link.ui.jsx";
+import { LoaderCircle } from "lucide-react";
 
 export function LoginFormComponent() {
     const {
@@ -28,28 +29,31 @@ export function LoginFormComponent() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const handleError = (error) => {
         const errorMessage = generateErrorMessage(error.code);
         toast.error(errorMessage);
+        setLoading(false);
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const signInPromise = async () => {
+        setLoading(true);
+
+        try {
             const userCredential = await signInUserWithEmailAndPassword(
                 email,
                 password,
             );
             const user = userCredential.user;
             console.log("Successfully Signed in!", user);
-        };
-
-        toast.promise(signInPromise(), {
-            loading: "Signing in, please wait...",
-            success: "Sign-in successful! Welcome back.",
-            error: (error) => generateErrorMessage(error.code),
-        });
+            toast.success("Sign-in successful! Welcome back.");
+        } catch (error) {
+            handleError(error);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -97,39 +101,46 @@ export function LoginFormComponent() {
                                 />
                             </div>
                             <Button
+                                disabled={loading}
                                 type="submit"
                                 className="w-full transition-none"
                             >
-                                Login
+                                {loading ? (
+                                    <LoaderCircle className="animate-spin" />
+                                ) : (
+                                    "Login"
+                                )}
                             </Button>
                         </form>
                         <div className="mt-4 grid grid-cols-4 gap-2">
-                            <OAuthButtonComponent
+                            <OAuthButtonUi
                                 provider="google"
                                 onClick={signInUserWithGoogle}
                                 onError={handleError}
+                                disabled={loading}
                             />
-                            <OAuthButtonComponent
+                            <OAuthButtonUi
                                 provider="microsoft"
                                 onClick={signInUserWithMicrosoft}
                                 onError={handleError}
+                                disabled={loading}
                             />
-                            <OAuthButtonComponent
+                            <OAuthButtonUi
                                 provider="github"
                                 onClick={signInUserWithGithub}
                                 onError={handleError}
+                                disabled={loading}
                             />
-                            <OAuthButtonComponent
+                            <OAuthButtonUi
                                 provider="facebook"
                                 onClick={signInUserWithFacebook}
                                 onError={handleError}
+                                disabled={loading}
                             />
                         </div>
                         <div className="mt-4 text-center text-sm">
                             Don&apos;t have an account?{" "}
-                            <LinkComponent to="/register">
-                                Sign up
-                            </LinkComponent>
+                            <LinkUi to="/register">Sign up</LinkUi>
                         </div>
                     </CardContent>
                 </Card>
